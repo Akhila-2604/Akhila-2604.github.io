@@ -127,7 +127,7 @@
 
         /* Sections */
         section {
-            padding: 50px 0 10px 0;
+            padding: 40px 0 10px 0;
         }
 
         h2 {
@@ -175,6 +175,38 @@
             border-radius: 6px;
             font-size: 0.85rem;
             color: var(--text-main);
+        }
+
+        /* Certifications Grid layout */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .cert-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        .cert-title {
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .cert-issuer {
+            color: var(--accent-primary);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .cert-date {
+            color: var(--text-muted);
+            font-size: 0.8rem;
         }
 
         /* Experience Timeline */
@@ -273,6 +305,7 @@
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
+            <a href="#credentials">Certifications</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Project Deployment</a>
         </div>
@@ -332,6 +365,34 @@
                     <span class="skill-tag">Vite</span>
                     <span class="skill-tag">Java</span>
                     <span class="skill-tag">MySQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="credentials">
+        <h2>Licenses & Certifications</h2>
+        <div class="card">
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-title">Certified Security Analyst</div>
+                    <div class="cert-issuer">Sekoia.io</div>
+                    <div class="cert-date">Issued May 2026</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-title">Initiation to the Playbooks</div>
+                    <div class="cert-issuer">Sekoia.io</div>
+                    <div class="cert-date">Issued Apr 2026</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-title">Initiation to the Custom Formats</div>
+                    <div class="cert-issuer">Sekoia.io</div>
+                    <div class="cert-date">Issued Apr 2026</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-title">Sekoia Fundamentals</div>
+                    <div class="cert-issuer">Sekoia.io</div>
+                    <div class="cert-date">Issued Apr 2026</div>
                 </div>
             </div>
         </div>
