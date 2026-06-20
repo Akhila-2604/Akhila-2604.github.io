@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhila Pragnapuram | Cyber Security Analyst</title>
+    <style>
+        :root {
+            --bg-color: #ffffff; /* Clean white background */
+            --card-bg: #f8fafc; /* Very light slate gray */
+            --accent-primary: #0d9488; /* Professional Teal */
+            --accent-secondary: #0f172a; /* Deep Slate */
+            --text-main: #334155; /* Soft dark text for high readability */
+            --text-dark: #0f172a; /* Strong dark text */
+            --text-muted: #64748b;
+            --border-color: #e2e8f0; /* Crisp light border */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Nav Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        /* Hero Section */
+        header {
+            padding: 80px 0 40px 0;
+            text-align: left;
+        }
+
+        h1 {
+            color: var(--text-dark);
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--accent-primary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .location {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-primary);
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background-color: #0f766e;
+        }
+
+        .btn-secondary {
+            background-color: #ffffff;
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--card-bg);
+            border-color: var(--text-muted);
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 0 10px 0;
+        }
+
+        h2 {
+            color: var(--text-dark);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Grid Frameworks */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .skills-category h3 {
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .skill-tag {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--text-main);
+        }
+
+        /* Experience Timeline */
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .company-name {
+            color: var(--accent-primary);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .duration {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        /* Live Window Frame Styling */
+        .window-frame {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            background: #ffffff;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .window-header {
+            background: var(--card-bg);
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .window-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            background: #cbd5e1;
+        }
+
+        .window-title {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .live-iframe {
+            width: 100%;
+            height: 550px;
+            border: none;
+            background: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <div class="logo">AKHILA P.</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Project Deployment</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Akhila Pragnapuram</h1>
+        <div class="tagline">Cyber Security Analyst</div>
+        <div class="location">📍 Hyderabad, Telangana, India</div>
+        <div class="btn-group">
+            <a href="https://www.linkedin.com/in/akhila-pragnapuram" target="_blank" class="btn">Connect on LinkedIn</a>
+            <a href="https://bulk-scanner.vercel.app/" target="_blank" class="btn btn-secondary">Launch Scanner 🚀</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>Cyber Security Analyst with hands-on experience in VAPT, SIEM, DLP, and SOC operations. Skilled in identifying vulnerabilities, monitoring security events, and responding to incidents to protect organizational assets. Experienced in parsing raw system logs, threat hunting, and reducing operational bottlenecks through automation workflows.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Core</h2>
+        <div class="grid-2">
+            <div class="skills-category">
+                <h3>SOC & Defensive Security</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">SOC Operations (L1)</span>
+                    <span class="skill-tag">SIEM Monitoring</span>
+                    <span class="skill-tag">Log Analysis</span>
+                    <span class="skill-tag">DLP Management</span>
+                    <span class="skill-tag">Threat Detection</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>VAPT & Tools</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Penetration Testing</span>
+                    <span class="skill-tag">Wireshark</span>
+                    <span class="skill-tag">Nmap</span>
+                    <span class="skill-tag">Linux / Windows</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Networking & Cloud</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">TCP/IP & OSI Models</span>
+                    <span class="skill-tag">Routing & Switching</span>
+                    <span class="skill-tag">Google Cloud Platform</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Development & Tools</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">React / TypeScript</span>
+                    <span class="skill-tag">Vite</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">MySQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        
+        <div class="card">
+            <div class="exp-header">
+                <div class="job-title">Cyber Security Analyst</div>
+                <div class="duration">May 2025 - Present</div>
+            </div>
+            <div class="company-name" style="margin-bottom: 8px;">SiberSentinel Technologies Pvt. Ltd.</div>
+            <ul>
+                <li>Maintain dual execution models balancing proactive data protection policies and live threat tracking.</li>
+                <li>Manage and fine-tune DLP parameters and analyze complex security telemetry across central SIEM solutions.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="exp-header">
+                <div class="job-title">Cyber Security Analyst</div>
+                <div class="duration">May 2025 - Present</div>
+            </div>
+            <div class="company-name" style="margin-bottom: 8px;">ZOOM Technologies</div>
+            <ul>
+                <li>Utilize a comprehensive hybrid Purple Team strategy blending daily infrastructure monitoring with vulnerability assessments.</li>
+                <li>Triaged system alerts, executed log correlation operations, and delivered foundational SOC mentorship blocks to security teams.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Automation</h2>
+        <div class="card">
+            <h3 style="color: var(--text-dark); margin-bottom: 8px; font-size: 1.1rem; font-weight: 700;">Bulk IOC Reputation Scanner</h3>
+            <p style="margin-bottom: 15px; color: var(--text-main); font-size: 0.95rem;">
+                Defending the SOC against alert fatigue. This automation application eliminates mechanical copy-pasting by parsing raw logs or threat feeds (.txt/.csv) to instantly isolate and bucket target IPs and domains into Clean, Suspicious, or Malicious status profiles. Built using <strong>React, TypeScript, Vite, and Vercel</strong>.
+            </p>
+            
+            <div class="window-frame">
+                <div class="window-header">
+                    <div class="window-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="window-title">bulk-scanner.vercel.app</div>
+                    <div></div>
+                </div>
+                <iframe src="https://bulk-scanner.vercel.app/" class="live-iframe" title="Bulk IOC Reputation Scanner Live Deployment"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Akhila Pragnapuram &bull; Professional Portfolio Framework</p>
+    </footer>
+</div>
+
+</body>
+</html>
